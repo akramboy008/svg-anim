@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(241, 241, 241);
+}
+svg{
+    width: 400px;
+}
+.circle{
+    animation: moonMove2 5s linear infinite;
+}
+.atmos{
+    animation: atmosMove 2s linear infinite;
+}
+.moon{
+    animation: moonMove 5s linear infinite;
+}
+.spark{
+    animation: sparkMove 3s linear 0.1s infinite;
+}
+@keyframes sparkMove{
+    0%{
+      transform: translateX(0px) translateY(0px);  
+    }
+    50%{
+        transform: translateY(0px) translateX(0px);
+    }
+    100%{
+        transform: translateY(300px) translateX(0px);
+    }
+}
+ 
+@keyframes moonMove{
+    0%{
+        transform: translateY(0px) translateX(0px);
+    }
+    50%{
+        transform: translateX(60px) translateY(0px);
+    }
+    75%{
+        transform: translateY(0px) translateX(-60px);
+    }
+}
+@keyframes atmosMove{
+    0%{
+        transform: translateX(0px) translateY(0px);
+    }
+    50%{
+        transform: translateX(30px) translateY(0px) ;
+    }
+    100%{
+        transform: translateX(-30px) translateY(0px) ;
+    }
+}
+@keyframes moonMove2{
+    0%{
+        transform: translateY(0px)
+        translateX(0px);
+    }
+
+    100%{
+      transform: translateY(100px);
+    }
+}
